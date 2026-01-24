@@ -7,7 +7,7 @@ export const heroSection: HeroSectionType = {
   tagline:
     'I build modern, user-focused web solutions that turn ideas into innovation.',
   description:
-    "I'm a devoted Full-Stack web developer with hands-on experience in building web applications using React.js + Next.js, Node.js + Express.js with TypeScript, TailwindCSS, and Prisma ORM, with modern and interactive UI.",
+    "I'm a devoted web developer with hands-on experience in building web applications using React.js + Next.js, Node.js + Express.js with TypeScript, TailwindCSS, and Prisma ORM, with modern and interactive UI.",
   specialText:
     'Available for Freelance | Internship | Full-Time Opportunities.',
   cta: {
