@@ -6,7 +6,7 @@ export const skillsSection: SkillsSectionType = {
   skills: [
     {
       id: getId(),
-      title: 'full stack development',
+      title: 'web development',
       // animation lottie file: https://lottiefiles.com/
       lottie: {
         light: '/lotties/frontend.json',
