@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: seoData.image,
         width: 1200,
         height: 630,
-        alt: 'Nilesh Rana - Web Developer Portfolio',
+        alt: 'Rohit Kumar - Web Developer Portfolio',
       },
     ],
   },
@@ -76,11 +76,11 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Nilesh Rana',
+    name: 'Rohit Kumar',
     alternateName: 'nilexrana',
     url: 'https://nileshrana.me',
     image: 'https://nileshrana.me/nilesh.jpeg',
-    email: 'info.nilexrana@gmail.com',
+    email: 'rohitplaysg123@gmail.com',
     jobTitle: 'Web Developer',
     worksFor: {
       '@type': 'Organization',

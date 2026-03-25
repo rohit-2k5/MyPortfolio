@@ -4,15 +4,17 @@ export const experienceSection: ExperienceSectionType = {
   title: "where i've worked",
   experiences: [
     {
-      company: 'Gharpayy',
-      companyUrl: 'https://www.gharpayy.com/',
+      company: 'SociolinQ',
+      companyUrl: 'https://www.sociolinq.com/',
       role: 'web developer intern',
-      started: 'nov 2025',
+      started: 'Dec 2025',
       upto: 'present',
       tasks: [
-        'Spearhead the maintenance and enhancement of the core product website.',
-        'Improve website performance, UI, and usability for active users and live traffic.',
-        'Fix bugs, handle updates, and continuously enhance the site based on user needs and feedback.',
+        'Developed and maintained key modules of an HRMS (Human Resource Management System) using React and Redux.',
+        'Built responsive and user-friendly UI components to streamline employee and administrative workflows.',
+        'Managed global state efficiently using Redux to ensure smooth data flow across the application.',
+        'Debugged issues and implemented feature enhancements based on team feedback and project requirements.',
+        'Improved application performance and usability for better handling of real-time user interactions.',
       ],
     },
   ],

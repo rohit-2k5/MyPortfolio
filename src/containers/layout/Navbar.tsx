@@ -123,19 +123,45 @@ const Navbar = () => {
 
             <div className="flex items-center justify-between gap-5 xl:gap-6">
               {cta && (
-                <Button
-                  type="link"
-                  href={cta.url}
-                  sameTab={cta?.sameTab}
-                  variants={slideIn({
-                    delay: ANIMATION_DELAY + navLinks.length / 10,
-                    direction: 'down',
-                  })}
-                  initial="hidden"
-                  animate="show"
-                >
-                  {cta.title}
-                </Button>
+                (() => {
+                  const isFile = typeof cta.url === 'string' && /\.(pdf|zip|docx?|pptx?)$/i.test(cta.url);
+                  const motionProps = {
+                    variants: slideIn({
+                      delay: ANIMATION_DELAY + navLinks.length / 10,
+                      direction: 'down',
+                    }),
+                    initial: 'hidden',
+                    animate: 'show',
+                  } as any;
+
+                  if (isFile) {
+                    // Render a plain anchor with download attribute so browser downloads/opens the file
+                    return (
+                      <motion.span {...motionProps}>
+                        <a
+                          href={cta.url}
+                          download
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`p-2 px-4 text-sm border-[1.5px] block w-fit font-mono capitalize rounded border-accent text-accent hover:bg-accent-light focus:outline-none focus:bg-accent-light duration-150`}
+                        >
+                          {cta.title}
+                        </a>
+                      </motion.span>
+                    );
+                  }
+
+                  return (
+                    <Button
+                      type="link"
+                      href={cta.url}
+                      sameTab={cta?.sameTab}
+                      {...motionProps}
+                    >
+                      {cta.title}
+                    </Button>
+                  );
+                })()
               )}
               <DarkModeButton
                 onClick={() => setNavbarCollapsed(false)}

@@ -3,7 +3,7 @@ import { resumeFileName } from '@/lib/utils/config';
 
 export const heroSection: HeroSectionType = {
   subtitle: 'Hey There, I am',
-  title: 'Nilesh Rana.',
+  title: 'Rohit Kumar.',
   tagline:
     'I build modern, user-focused web solutions that turn ideas into innovation.',
   description:

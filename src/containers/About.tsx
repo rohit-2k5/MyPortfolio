@@ -24,7 +24,7 @@ const About = () => {
       <main className="flex flex-col items-center gap-16 lg:items-start lg:flex-row">
         <div className="space-y-4 lg:w-3/5">
           <p>
-            Hi, I'm Nilesh, a third-year B.Tech Computer Science and Engineering
+            Hi, I'm Rohit, a third-year B.Tech Computer Science and Engineering
             student at{' '}
             <Link
               href="https://www.lpu.in/"

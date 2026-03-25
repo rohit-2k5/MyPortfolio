@@ -1,4 +1,4 @@
-# 💼 Nilesh Rana - Portfolio
+# 💼 Rohit Kumar - Portfolio
 
 A modern, responsive portfolio website showcasing my work as a Web Developer. Built with Next.js, TypeScript, and Tailwind CSS, featuring smooth animations and an intuitive user experience.
 
@@ -75,7 +75,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📧 Contact
 
-Nilesh Rana - [@nilexrana](https://github.com/nilexrana)
+nilexrana - [@nilexrana](https://github.com/nilexrana)
+
+Rohit Kumar - [@nilexrana](https://github.com/nilexrana)
 
 Portfolio: [nileshrana.me](https://nileshrana.me)
 

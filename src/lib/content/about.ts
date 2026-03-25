@@ -19,5 +19,5 @@ export const aboutSection: AboutSectionType = {
       'MySQL',
     ],
   },
-  img: '/nilesh.jpeg',
+  img: '/rohit_profile.jpeg',
 };

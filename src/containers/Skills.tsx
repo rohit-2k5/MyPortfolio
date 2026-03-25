@@ -30,10 +30,10 @@ const Skills = () => {
         ))}
       </div>
 
-      <Image 
+      <Image
         onClick={() => window.open('https://leetcode.com/u/nileXrana', 'blank')}
         src="/heatmap.png"
-        alt="Nilesh Rana"
+        alt="Rohit Kumar"
         width={1000}
         height={1000}
         className="mx-auto rounded-xl opacity-80 cursor-pointer"
