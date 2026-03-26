@@ -38,20 +38,22 @@ const FeaturedProject = ({
             align === 'left' && 'ml-auto'
           )}
         >
-          <Image
-            src={img}
-            alt={name}
-            width={720}
-            height={480}
-            className="object-cover w-full h-full transition-transform duration-200 group-hover:scale-105"
-            placeholder="blur"
-            blurDataURL={blurImageURL}
-          />
-          <Link
-            href={`${url}`}
+          <a
+            href={url}
             target="_blank"
-            className="absolute inset-0 z-10 block bg-transparent"
-          />
+            rel="noopener noreferrer"
+            className="block w-full h-full"
+          >
+            <Image
+              src={img}
+              alt={name}
+              width={720}
+              height={480}
+              className="object-cover w-full h-full transition-transform duration-200 group-hover:scale-105"
+              placeholder="blur"
+              blurDataURL={blurImageURL}
+            />
+          </a>
         </div>
         <div
           className={cn(
@@ -141,20 +143,22 @@ const FeaturedProject = ({
       >
         {/* Image Header */}
         <header className={cn('w-full')}>
-          <Image
-            src={img}
-            alt={name}
-            width={720}
-            height={480}
-            className="object-cover w-full h-full transition-transform duration-200 group-hover:scale-105"
-            placeholder="blur"
-            blurDataURL={blurImageURL}
-          />
-          <Link
-            href={`${url}`}
+          <a
+            href={url}
             target="_blank"
-            className="absolute inset-0 z-10 block bg-transparent"
-          />
+            rel="noopener noreferrer"
+            className="block w-full h-full"
+          >
+            <Image
+              src={img}
+              alt={name}
+              width={720}
+              height={480}
+              className="object-cover w-full h-full transition-transform duration-200 group-hover:scale-105"
+              placeholder="blur"
+              blurDataURL={blurImageURL}
+            />
+          </a>
         </header>
 
         <div className={cn('bg-bg-secondary p-5 space-y-2')}>

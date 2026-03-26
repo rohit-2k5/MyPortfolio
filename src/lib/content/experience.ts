@@ -14,7 +14,6 @@ export const experienceSection: ExperienceSectionType = {
         'Built responsive and user-friendly UI components to streamline employee and administrative workflows.',
         'Managed global state efficiently using Redux to ensure smooth data flow across the application.',
         'Debugged issues and implemented feature enhancements based on team feedback and project requirements.',
-        'Improved application performance and usability for better handling of real-time user interactions.',
       ],
     },
   ],

@@ -6,23 +6,23 @@ const featuredProjectsSection: FeaturedProjectsSectionType = {
   projects: [
     {
       id: getId(),
-      name: 'Optisense AI',
-      description: 'Your Personal AI Assistants for specific tasks.',
+      name: 'Quick Connect',
+      description: 'Video Conferencing & Real-Time Communication Platform',
       tasks:
-        'An opinionated Next.js app for creating own personal AI assistants: uses the App Router, server and client components for fast UI, Prisma for relational storage, and a Gemini-powered AI client to handle conversations. It provides assistant creation, settings, chat UI, feedback collection, REST API routes and Razorpay-powered billing — all designed for extensibility and secure production use.',
-      url: 'https://optisense.nileshrana.me/',
-      img: '/optisense.png',
-      tags: ['NextJs', 'TypeScript', 'TailwindCSS', 'Prisma', 'Razorpay'],
+        'Quick Connect is a MERN-based application for seamless real-time communication. It enables users to join video calls, share screens, and interact through an integrated live chat system. Built with a responsive UI and efficient backend APIs, the platform ensures smooth, low-latency communication for multiple users.',
+      url: 'https://quickconnectfrontend.onrender.com/',
+      img: '/quickconnect.png',
+      tags: ['Reactjs', 'JavaScript', 'CSS', 'SocketIO', 'MongoDB'],
     },
     {
       id: getId(),
-      name: 'Syntaxist',
-      description: 'An Online Code Compiler with multiple languages.',
+      name: 'TradeVista',
+      description: 'Stock Trading Plateform',
       tasks:
-        'Run Python, JavaScript, C++, Java, Go, Rust, Ruby, PHP, Swift, C# code instantly. Real-time execution in dockerised container, Interactive Terminal using websocket connection, TC/SC analysis, and smart code suggestions.',
-      url: 'https://syntaxist.nileshrana.me/',
-      img: '/syntaxist.png',
-      tags: ['NextJs', 'TypeScript', 'Express', 'WebSocket', 'Docker'],
+        'Trade Vista is a full-stack web application that simulates stock trading and portfolio management. It allows users to buy and sell stocks, track market data, and manage their investments through a clean and interactive interface. Built with efficient backend APIs and a focus on performance, it provides a practical experience of real-world trading workflows.',
+      url: 'https://stock-trading-plateform-frontend.onrender.com/',
+      img: '/zerodha.png',
+      tags: ['ReactJs', 'JavaScript', 'Express', 'BootStrap', 'MongoDB'],
     },
     {
       id: getId(),

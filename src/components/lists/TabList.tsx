@@ -3,7 +3,7 @@ import useWindowWidth from '@/lib/hooks/use-window-width';
 import { ExperienceType } from '@/lib/types';
 import { getBreakpointsWidth, getId } from '@/lib/utils/helper';
 
-import { Link, ListItem } from '@/components';
+import { ListItem } from '@/components';
 
 import { useState } from 'react';
 
@@ -63,10 +63,10 @@ const TabList = ({ experiences }: Props) => {
           );
         })}
         {/* Slider */}
-        <div className="absolute h-0.5 w-full sm:w-0.5 sm:h-full rounded-full bottom-0 sm:inset-0 left-0 bg-dark-3"></div>
+        <div className="absolute h-0.5 w-full sm:w-0.5 sm:h-full rounded-full bottom-0 sm:inset-0 left-0 bg-dark-3 pointer-events-none"></div>
         <div
           style={sliderStyle}
-          className="absolute h-0.5 w-[120px] sm:w-0.5 sm:h-10 rounded-full bg-accent bottom-0 left-0 sm:inset-0 transition-all duration-250 delay-100 in-scroll"
+          className="absolute h-0.5 w-[120px] sm:w-0.5 sm:h-10 rounded-full bg-accent bottom-0 left-0 sm:inset-0 transition-all duration-250 delay-100 in-scroll pointer-events-none"
         ></div>
       </div>
 
@@ -74,9 +74,13 @@ const TabList = ({ experiences }: Props) => {
         <div className="space-y-1">
           <h3 className="text-lg font-medium capitalize text-dark-2">
             {role}{' '}
-            <Link href={companyUrl} target="_blank" className="text-accent">
-              @{company}
-            </Link>
+            {companyUrl ? (
+              <a href={companyUrl} target="_blank" rel="noopener noreferrer" className="text-accent">
+                @{company}
+              </a>
+            ) : (
+              <span className="text-accent">@{company}</span>
+            )}
           </h3>
           <p className="font-mono text-xs capitalize">
             <>
