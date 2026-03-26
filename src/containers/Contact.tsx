@@ -7,7 +7,7 @@ import { Button, Wrapper } from '@/components';
 import { getSectionAnimation } from '@/styles/animations';
 
 const Contact = () => {
-  const { subtitle, title, paragraphs } = contactSection;
+  const {subtitle, title, paragraphs } = contactSection;
 
   const formRef = useRef<HTMLFormElement | null>(null);
   const [sending, setSending] = useState(false);
@@ -23,9 +23,15 @@ const Contact = () => {
 
     setSending(true);
 
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_xzbqh24';
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_mauael3';
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '10ot2CCpLaE38aeN5';
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setError('Email service is not configured. Please set EmailJS credentials in environment variables.');
+      setSending(false);
+      return;
+    }
 
     try {
       await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey);

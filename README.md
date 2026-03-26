@@ -35,7 +35,7 @@ A modern, responsive portfolio website showcasing my work as a Web Developer. Bu
 
 ```bash
 # Clone the repository
-git clone https://github.com/nilexrana/my-portfolio.git
+git clone https://github.com/rohit-2k5/MyPortfolio
 
 # Navigate to project directory
 cd my-portfolio
@@ -75,11 +75,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📧 Contact
 
-nilexrana - [@nilexrana](https://github.com/nilexrana)
-
-Rohit Kumar - [@nilexrana](https://github.com/nilexrana)
-
-Portfolio: [nileshrana.me](https://nileshrana.me)
+Rohit Kumar - [@rohit-2k5](https://github.com/nilexrana)
 
 ## 📄 License
 
