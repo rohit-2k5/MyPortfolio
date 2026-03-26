@@ -2,12 +2,12 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-import { contactSection } from '@/lib/content/contact';
 import { Button, Wrapper } from '@/components';
 import { getSectionAnimation } from '@/styles/animations';
+import { contactSection } from '@/lib/content/contact';
 
 const Contact = () => {
-  const {subtitle, title, paragraphs } = contactSection;
+  const { subtitle, title, paragraphs } = contactSection;
 
   const formRef = useRef<HTMLFormElement | null>(null);
   const [sending, setSending] = useState(false);
@@ -38,7 +38,11 @@ const Contact = () => {
       setSuccess('Message sent — thank you!');
       formRef.current.reset();
     } catch (err) {
-      console.error('EmailJS error', err);
+      if (process.env.NODE_ENV === 'development') {
+        // only log in development
+        // eslint-disable-next-line no-console
+        console.error('EmailJS error', err);
+      }
       setError('Failed to send message. Please try again later.');
     } finally {
       setSending(false);
