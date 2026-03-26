@@ -69,13 +69,9 @@ src/
 └── public/             # Static assets
 ```
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/nilexrana/my-portfolio/issues).
-
 ## 📧 Contact
 
-Rohit Kumar - [@rohit-2k5](https://github.com/nilexrana)
+Rohit Kumar - [@rohit-2k5](https://github.com/rohit-2k5)
 
 ## 📄 License
 
