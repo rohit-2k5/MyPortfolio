@@ -32,7 +32,7 @@ const featuredProjectsSection: FeaturedProjectsSectionType = {
         'Shorten your URLs and share them easily. Track clicks and manage your links with a simple interface.',
       url: 'https://bitlinks.nileshrana.me/',
       img: '/bitlinks.png',
-      tags: ['NextJs', 'TailwindCSS', 'MongoDB'],
+      tags: ['NextJs', 'TailwindCSS', 'MongoDBoo'],
     },
   ],
 };

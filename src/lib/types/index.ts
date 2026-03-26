@@ -31,7 +31,7 @@ export type ProjectType = {
   year: number;
   img: string;
   tags: string[];
-  repo: string;
+  repo?: string; // made optional because some project entries no longer include repo
 };
 
 export interface FeaturedProjectType

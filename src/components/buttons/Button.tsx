@@ -9,6 +9,7 @@ interface DefaultProps {
   className?: string;
   size?: 'lg' | 'sm';
   center?: boolean;
+  disabled?: boolean;
 }
 
 interface LinkProps extends DefaultProps {
@@ -22,11 +23,11 @@ interface ButtonProps extends DefaultProps {
 
 type Props =
   | ({
-      type?: 'button';
-    } & ButtonProps)
+    type?: 'button' | 'submit';
+  } & ButtonProps)
   | ({
-      type: 'link';
-    } & LinkProps);
+    type: 'link';
+  } & LinkProps);
 
 // For separating animation props from button props
 const buttonProps: Array<keyof Props | keyof LinkProps> = [
@@ -45,26 +46,25 @@ const Button = (props: Props & MotionProps) => {
     type = 'button',
     size = 'sm',
     center = false,
-  } = props;
+    disabled = false,
+  } = props as any;
 
-  const classes = `${
-    size === 'sm'
+  const classes = `$${size === 'sm'
       ? 'p-2 px-4 text-sm border-[1.5px] '
       : 'text-sm p-4 px-6 border-2'
-  } block ${
-    center ? 'mx-auto' : ''
-  } w-fit font-mono capitalize rounded border-accent text-accent hover:bg-accent-light focus:outline-none focus:bg-accent-light duration-150 cursor-pointer ${className}`;
+    } block ${center ? 'mx-auto' : ''
+    } w-fit font-mono capitalize rounded border-accent text-accent hover:bg-accent-light focus:outline-none focus:bg-accent-light duration-150 cursor-pointer ${className}`;
 
   // TODO: Needs to improve this framer motion logic
-  if (props.type === 'link') {
-    const { sameTab, ...motionProps } = props;
-    removeKeys<Props & LinkProps>(motionProps, buttonProps);
+  if ((props as any).type === 'link') {
+    const { sameTab, ...motionProps } = props as any;
+    removeKeys<Props & LinkProps>(motionProps, buttonProps as any);
 
     return (
       <motion.span {...motionProps}>
         <Link
           className={classes}
-          href={props.href}
+          href={(props as any).href}
           target={sameTab ? '_self' : '_blank'}
           rel="noopener noreferrer"
         >
@@ -74,9 +74,9 @@ const Button = (props: Props & MotionProps) => {
     );
   }
 
-  if (type == 'button') {
+  if (type === 'button' || type === 'submit') {
     return (
-      <button type={type} className={classes} onClick={props.onClick}>
+      <button type={type} className={classes} onClick={(props as any).onClick} disabled={disabled}>
         {children}
       </button>
     );
